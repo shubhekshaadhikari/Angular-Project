@@ -1,0 +1,53 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+
+:root{
+    --purple: #7F56D9;       /*soft violet*/
+    --darkpurple: #6941C6;   /* */
+    --white: #ffffff;
+    --davygrey: #555555;
+    --lightgrey: #667085;
+    --offwhite: #D0D5DD;
+    --whitegrey: #EAECF0;
+    --grey: #344054;
+    --black: #000000;
+    --lightgreen:  #ECFDF3;
+    --ghostwhite: #F9F5FF;    /*#fcfcfd*/
+    --green: #12B76A;
+    --red: #F04438;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+h1{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    text-align: center;
+}
+p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+a{
+    text-decoration: none;
+}
+button{
+    background-color: white;
+}
+*:focus{
+    /* box-shadow: 1px 1px 1px -1px rgba(0,0,0,0.57); */
+    outline: none;
+}
+
+
+

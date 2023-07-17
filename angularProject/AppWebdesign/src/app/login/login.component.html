@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+
+<main class="main-box">
+    <section class="login-container">
+        <section class="login-header">
+            <section class="login-head-img">
+                <img src="/assets/logo-img.svg">
+            </section>
+            <section class="login-head-wrap">
+                <h1>Log in to your account</h1>
+                <p>Welcome back! Please enter your details</p>
+            </section>
+        </section>
+        <section class="login-body">
+            <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
+                <section class="input-group">
+                    <label class="label" for="email">Email*</label>
+                    <input class="input-field" type="email" placeholder="Enter your email" formControlName="email" id="email">
+                    <app-validation [control]="loginForm.get('email')" fieldName="Email"></app-validation>
+                </section>
+                <section class="input-group">
+                    <label class="label" for="password">Password*</label>
+                    <input class="input-field" type="password" placeholder="........" formControlName="password" id="password">
+                    <app-validation [control]="loginForm.get('password')" fieldName="Password"></app-validation>
+                </section>
+                <section class="row">
+                    <div>
+                        <input type="checkbox" id="remember">
+                        <label class="label" for="remember">Remember for 30 days</label>
+                    </div>
+                    <a href="#">Forget Password</a> 
+                </section>                 
+                <section class="login-action">
+                    <button type="submit" class="signin btn" id="loginbtn">Log in</button>
+                    <button type="button" class="signsocial btn"><img src="/assets/google-icon.svg"> Sign in with Google</button>
+                </section>
+            </form>
+        </section>
+        <section class="footer-row">
+            <p>Don't have an account? <a href="#" (click)="Signup($event)">Sign up</a></p>
+        </section>       
+    </section>
+</main>

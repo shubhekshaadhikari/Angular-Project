@@ -1,0 +1,188 @@
+<app-sidebar></app-sidebar>
+<main class="main-wrap">
+    <section class="main-section">
+        <section class="page-header">
+            <section class="header-content">
+                <section class="header-wrap">
+                    <h1>Welcome back, Olivia</h1>
+                    <p>Track, manage and forecast your customer and ordres</p>
+                </section>
+                <section class="header-action">
+                    <a href="#" class="nav-side-btn btn"><i class="fa-solid fa-cloud-arrow-up"></i>Import</a>
+                    <a href="./settings.html" class="nav-side-btn btn" id="purple" (click)="Form($event)"><i class="fa-solid fa-plus"></i>Add</a>
+                </section>
+            </section>
+        </section>
+        <section class="metric-section">
+            <section class="metric-group">
+                <section class="metric-item">
+                    <section class="item-heading">
+                        <h1>Total Customers</h1>
+                        <button type="button" class="btn-icon">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                    </section>
+                    <section class="item-body">
+                        <section class="item-data">
+                            <h1 id="tableItemNo"></h1>
+                            <section class="item-row-wrap">
+                                <p><span class="green"><i class="fa-solid fa-arrow-up green"></i>40% </span>vs last month</p>
+                            </section>
+                        </section>
+                        <section class="item-img">
+                            <img src="/assets/Chart1.svg">
+                        </section>
+                    </section>
+                </section>
+                <section class="metric-item">
+                    <section class="item-heading">
+                        <h1>Members</h1>
+                        <button type="button" class="btn-icon">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                    </section>
+                    <section class="item-body">
+                        <section class="item-data">
+                            <h1>1,210</h1>
+                            <section class="item-row-wrap">
+                                <p><span class="red"><i class="fa-solid fa-arrow-down red"></i>10% </span>vs last month</p>
+                            </section>
+                        </section>
+                        <section class="item-img">
+                            <img src="/assets/Chart2.svg">
+                        </section>
+                    </section>
+                </section>
+                <section class="metric-item">
+                    <section class="item-heading">
+                        <h1>Active Now</h1>
+                        <button type="button" class="btn-icon">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                    </section>
+                    <section class="item-body">
+                        <section class="item-data">
+                            <h1>316</h1>
+                            <section class="item-row-wrap">
+                                <p><span class="green"><i class="fa-solid fa-arrow-up green"></i>20% </span>vs last month</p>
+                            </section>
+                        </section>
+                        <section class="item-img">
+                            <img src="/assets/Chart1.svg">
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+        <section class="data-section">
+            <section class="row">
+                <section class="action">
+                    <section class="badge">
+                        <div class="btn">All time <i class="fa-solid fa-xmark"></i></div>
+                        <div class="btn">Us, AU, +4 <i class="fa-solid fa-xmark"></i></div>
+                    </section>
+                    <a href="#" class="nav-side-btn btn"><img src="/assets/Filters lines.svg">  More Filter</a>
+                </section>
+                <section class="search-container">
+                    <form>
+                        <input class="content" type="search" placeholder="Search..." oninput="performSearch()" id="searchbar">
+                    </form>
+                </section>
+            </section>
+            
+            <section class="table-container">
+                <table id="data">
+                    <thead>
+                        <tr>
+                            <th>Profile</th>
+                            <th>Progress</th>
+                            <th>Role</th>
+                            <th>Users</th>
+                            <th>About</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablBody"> 
+                        <tr *ngFor="let user of formData">
+                            <td>
+                                <section class="col1">
+                                    <figure>
+                                        <img src="/assets/Catalog-icon.svg">
+                                    </figure>
+                                    <section>
+                                        <h1>{{user.fname +' '+ user.lname}}</h1>
+                                        <p>{{user.email}}</p>
+                                    </section>
+                                </section>
+                            </td>
+                            <td class="col2">
+                                <progress class="progress-bar" value="70" max="100"></progress>
+                            </td>
+                            <td class="col3">
+                                <section class="badge">Customer</section>
+                            </td>
+                            <td class="col4">
+                                <section class="avatars">
+                                    <a href="#" class="avatars__item"><img src="/assets/Avatar1.svg"></a>
+                                    <a href="#" class="avatars__item"><img src="/assets/Avatar2.svg"></a>
+                                    <a href="#" class="avatars__item"><img src="/assets/Avatar3.svg"></a>
+                                    <a href="#" class="avatars__item"><img src="/assets/Avatar4.svg"></a>
+                                    <a href="#" class="avatars__item"><img src="/assets/Avatar+2.svg"></a>
+                                </section>
+                            </td>
+                            <td class="col5">
+                                <section>
+                                    <h1>{{user.role}}</h1>
+                                    <p>{{user.bio}}</p>
+                                </section>
+                            </td>
+                            <td>
+                                <section class="col6">
+                                    <button type="button" class="btn-icon table-btn" >
+                                        <img src="/assets/delete.svg">
+                                    </button>
+                                    <button type="button" class="btn-icon table-btn">
+                                        <img src="/assets/edit.svg">
+                                    </button>
+                                </section>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <section class="pagination">
+                    <section class="action">
+                        <a href="#" class="nav-side-btn btn">Previous</a>
+                        <a href="#" class="nav-side-btn btn">Next</a>
+                    </section>
+                    <section class="wrap">
+                        <p>Page 1 of 10</p>
+                    </section>
+                </section>
+            </section>
+
+            <!-- <section class="table-container">
+                    <table id="data">
+                    <thead>
+                        <tr>
+                            <th>Profile</th>
+                            <th>Progress</th>
+                            <th>Role</th>
+                            <th>Users</th>
+                            <th>About</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody >
+
+                    </tbody>
+                    </table>
+                <section class="pagination">
+                    <section class="action">
+                        <a href="#" class="nav-side-btn btn">Previous</a>
+                        <a href="#" class="nav-side-btn btn">Next</a>
+                    </section>
+                </section>
+            </section> -->
+        </section>
+    </section>        
+</main>

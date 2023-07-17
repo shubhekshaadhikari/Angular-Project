@@ -1,0 +1,223 @@
+.nav-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+    width: 100%;
+    border-bottom: 1px solid var(--offwhite);
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 44px;
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 32px;
+}
+.nav-content{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 32px;
+}
+.nav-logo{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    min-height: 32px;
+}
+.nav-logo-img {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+}
+.nav-logo h1{
+    font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.nav-logo #closeIcon{
+    visibility: collapse;
+    position: absolute;
+    right: 20px;
+}
+.fa-angle-down{
+    padding-left: 13px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.nav-menu{
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    width: 100%;
+    /* min-height: 32px; */
+}
+.nav-menu li, .nav-side-menu li{
+    list-style: none;
+}
+.nav-menu li .dropdown li{
+    visibility: collapse;
+    display: flex;
+}
+.nav-menu li .dropdown li:hover{
+    visibility: visible;
+}
+.dropdown:hover{
+    padding: 5px;
+}
+.list-4 {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+    z-index: 10;
+}
+#drop-4:checked~ .list-4 {
+    visibility: visible;
+    opacity: 2;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+}
+.nav-menu a, .nav-side-menu a{
+    text-decoration: none;
+    color: var(--lightgrey);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+.nav-btn{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 8px;
+    padding: 0 9px;
+}
+.btn-icon{
+    border: none;
+    font-size: 26px;
+    width: 40px;
+}
+.nav-side-menu{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.sidemenu-list{
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    width: 100%;
+}
+.nav-side-btn{
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px 18px;
+}
+#purple{
+    background-color: var(--purple);
+    color: var(--white);
+}
+#purple:hover{
+    background-color:var(--darkpurple);
+    color: var(--white);
+}
+.sidemenu-img{
+    visibility: collapse;
+}
+@media screen and  (max-width: 1024px)
+{   
+    .nav-bar{
+        width: 100%;
+        max-width: 1024px;
+        min-height: 72px;
+    }
+    .nav-container{
+        width: 100%;
+        padding: 0 12px 0 16px;
+    }
+    .nav-logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 142px;
+        min-height: 32px;
+    }
+    .nav-logo h1{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .nav-logo-img {
+        width: 32px;
+        height: 32px;
+    }
+    .nav-menu, .sidemenu-list{
+        display: none;
+    }
+    .nav-side-menu{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .sidemenu-img {
+        visibility: visible;
+        padding: 8px;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+    }
+    /* toggle responsive pop box */
+    .nav-container.active{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: fit-content;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        background-color: var(--white);
+        padding-top: 20px;
+        gap: 10px;
+    }
+    .nav-container.active .btn-icon{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+    .nav-container.active .nav-content{
+        visibility: visible;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .nav-container.active .nav-content .nav-menu{
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-container.active .nav-side-menu {
+        visibility: visible;
+        flex-direction: column;
+    }
+    .nav-container.active .nav-side-menu .sidemenu-list {
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and  (max-width: 480px)
+{   
+    .nav-bar{
+        width: 100%;
+        max-width: 480px;
+        min-height: 72px;
+    }  
+}

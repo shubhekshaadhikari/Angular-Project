@@ -1,0 +1,82 @@
+<app-navbar></app-navbar>
+
+<main class="main-box">
+    <section class="login-container">
+        <section class="signup-header">
+            <section class="login-head-img">
+                <img src="/assets/logo-img.svg">
+            </section>
+            <section class="signup-head-wrap">
+                <h1>Sign up</h1>
+                <p>Start your 30-day free trial.</p>
+            </section>
+        </section>
+        <section class="login-body">
+            <form class="login-form" [formGroup]="signupForm" (ngSubmit)="onSubmit()" >
+                <section class="input-group">
+                    <label class="label" for="fname">Full Name*</label>
+                    <input class="input-field" type="text" placeholder="Enter your first name" id="fname" formControlName="fullname" autocomplete="name">
+                    <app-validation [control]="signupForm.get('fullname')" fieldName="Name"></app-validation>               
+                </section>
+                <section class="input-group">
+                    <label class="label" for="email">Email*</label>
+                    <input class="input-field" type="email" placeholder="Enter your email" formControlName="email" id="email">
+                    <app-validation [control]="signupForm.get('email')" fieldName="Email"></app-validation>
+                </section>
+                <section class="input-group">
+                    <label class="label" for="password">Password*</label>
+                    <input class="input-field" type="password" placeholder="........" formControlName="password" id="password">
+                    <span class="label-next-line">Must be at least 8 characters</span>
+                    <app-validation [control]="signupForm.get('password')" fieldName="Password"></app-validation>
+                </section>
+                <section class="input-group">
+                    <label class="label" for="cpassword">Confirm Password *</label>
+                    <input class="input-field" type="password" placeholder="........" formControlName="cpassword" id="cpassword">
+                    <app-validation [control]="signupForm.get('cpassword')" fieldName="Confirm Password"></app-validation>
+                    <!-- {{signupForm.errors?.['passwordMatch']}} -->
+                    <div class="error-msg" *ngIf="signupForm.get('cpassword')?.touched && signupForm.errors?.['passwordMatch'] === false">   
+                        Confirm password does not match Password
+                    </div>
+                   
+                </section>
+                <section class="input-group">
+                    <label class="label" for="dob">Date of Birth*</label>
+                    <input class="input-field" type="date" formControlName="dob" id="dob">
+                    <app-validation [control]="signupForm.get('dob')" fieldName="Date of Birth"></app-validation>
+                </section>
+                <section class="input-radio">
+                    <p class="label">Gender*</p>
+                    <input type="radio" id="female" name="gender">
+                    <label class="label" for="female">Female</label>
+                    <input type="radio" id="male" name="gender">
+                    <label class="label" for="male">Male</label>
+                    <input type="radio" id="other" name="gender">
+                    <label class="label" for="other">Others</label>
+                </section>
+                <section class="input-group">
+                    <label class="label" for="city">Select City*</label>
+                    <select id="city" class="input-field" formControlName="city">
+                        <option value="1">Kathmandu</option>
+                        <option value="2">Lalitpur</option>
+                        <option value="3">Bhaktapur</option>
+                        <option value="4">Pokhara</option>
+                        <option value="5">Nepalgunj</option>
+                    </select>
+                    <app-validation [control]="signupForm.get('city')" fieldName="City"></app-validation>
+                </section>
+                <section class="input-textarea">
+                    <label class="label" for="bio">Description*</label>
+                    <textarea rows="7" cols="40" placeholder="Enter your text here...." formControlName="bio" id="bio"></textarea>
+                    <app-validation [control]="signupForm.get('bio')" fieldName="Description"></app-validation>
+                </section>
+                <section class="login-action">
+                    <button type="submit" class="signin btn" id="loginbtn">Create Account</button>
+                    <button type="button" class="signsocial btn"><img src="/assets/google-icon.svg"> Sign in with Google</button>
+                </section>
+            </form>             
+        </section>
+        <section class="footer-row">
+            <p>Already have an account? <a href="#" (click)="Login($event)" >Log in</a></p>
+        </section>       
+    </section>
+</main>

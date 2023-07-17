@@ -1,0 +1,75 @@
+<header class="side-bar">
+    <section class="sidebar-content">
+        <section class="side-icon">
+            <figure id="hamburgerIcon">
+                <img src="/assets/hamburger-icon.svg">
+            </figure>
+        </section>
+        <section id="toggleSidebar">
+            <section class="sidebar-nav">
+                <section class="nav-header">
+                    <section class="header-logo">
+                        <figure>
+                            <img src="/assets/logo-img.svg">
+                        </figure>
+                        <h1>United UI</h1>
+                        <figure id="closeIcon" class="btn-icon">
+                            <i class="fas fa-times"></i>
+                        </figure>
+                    </section>
+                </section>
+                <section class="nav-search">
+                    <section class="search-container">
+                        <form class="content">
+                            <input class="content" type="search" placeholder="Search...">
+                        </form>
+                    </section>
+                </section>
+                <nav class="nav-menu">
+                    <section class="menu-list top">
+                        <a href="#"><img src="/assets/home.svg"> Home</a>
+                        <a href="#" (click)="Admin($event)"><img src="/assets/bar-chart.svg"> Dashboards</a>
+                        <a href="#"><img src="/assets/3-layers.svg"> Projects</a>
+                        <a href="#"><img src="/assets/check-square.svg"> Tasks</a>
+                        <a href="#"><img src="/assets/flag.svg"> Reportings</a>
+                        <a href="#"><img src="/assets/users.svg"> Users</a>
+                    </section>
+                </nav>
+            </section>
+            <section class="sidebar-footer">
+                <nav class="nav-menu">
+                    <section class="menu-list">
+                        <a href="#"><img src="/assets/bar-chart.svg"> Support</a>
+                        <a href="#" (click)="Form($event)"><img src="/assets/settings.svg"> Settings</a>
+                    </section>
+                </nav>
+                <section class="card">
+                    <div class="progress-circle"></div>
+                    <section class="card-wrap">
+                        <h1>Used space</h1>
+                        <p>Your team has used 80% of your available space. Need more ?</p>
+                        <section class="card-action">
+                            <a href="#">Dismiss</a>
+                            <a href="#">Upgrade plan</a>
+                        </section>
+                    </section>
+                </section>
+                <hr>
+                <section class="account">
+                    <section class="account-content">
+                        <figure>
+                            <img src="/assets/Avatar.svg">
+                        </figure>
+                        <div>
+                            <p id="profileName">Olivia Rhye</p>
+                            <p id="profileEmail">olivia@untitledui.com</p>
+                        </div>
+                    </section>
+                    <figure class="btn-icon">
+                        <a href="./login.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                    </figure>
+                </section>
+            </section>
+        </section>
+    </section>
+</header>

@@ -1,4 +1,4 @@
-@import url(/src/app/dashboad/dashboad.component.css);
+@import url(/src/app/admin/admin.component.css);
 @import url(/src/app/signup/signup.component.css);
 .main-section{
     background-color: var(--white);
@@ -299,3 +299,191 @@
 }
 
 
+@media screen and (max-width: 480px)
+{   
+    .side-bar{
+        max-width: 480px;
+        max-height: 70px;
+        position: relative;
+        overflow: hidden;
+    }
+    .sidebar-content {
+        flex-direction: row;
+        height: auto;
+        max-height: unset;
+        padding: 0;
+        background-color: var(--white);
+    }
+    .side-icon {
+        justify-content: space-between;
+        padding: 10px;
+        visibility: visible;
+        display: flex;
+    }
+    .side-icon figure{
+        width: 30px;
+        height: 30px;
+        padding-top: 16px;
+    }
+    .side-icon figure #closeIcon{
+        position: absolute;
+        top: 50px;
+        right: 200px;
+    }
+    .nav-header {
+        background-color: var(--white);
+    }
+    .header-logo h1 {
+        color: var(--black);
+    }
+    .nav-search,
+    .nav-menu,
+    .sidebar-footer {
+        visibility: hidden;
+        display: none;
+    }
+    .side-icon img {
+        object-fit: cover;
+    }
+    
+    /* Responsive pop-up styles */
+    #toggleSidebar.active {
+        visibility: visible;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        max-width: 480px;
+        height: 100%;
+        z-index: 9999;
+        background-color: var(--darkpurple);
+        overflow-y: auto;
+        transition: width 0.2s ease-in-out;
+    }
+    #toggleSidebar.active .sidebar-nav .nav-header,
+    #toggleSidebar.active .sidebar-nav .nav-search,
+    #toggleSidebar.active .sidebar-nav .nav-menu,
+    #toggleSidebar.active .sidebar-footer .nav-menu,
+    #toggleSidebar.active .sidebar-footer{
+        visibility: visible;
+        display: flex;
+        background-color: var(--darkpurple);
+        color: var(--white);
+        padding: 15px 10px;
+    }
+    #toggleSidebar.active .sidebar-nav .nav-search {
+        margin-top: 350px;
+    }
+    #toggleSidebar.active .sidebar-nav .nav-header .header-logo h1 {
+        color: var(--white);
+    }
+    #toggleSidebar.active .sidebar-nav .nav-header .header-logo #closeIcon {
+        position: absolute;
+        right: 10px;
+    }
+    
+
+
+
+    .main-wrap{
+        padding: 0;
+        background-color: var(--white);
+    }
+    .main-section{
+        left: 0px;
+        width: 100%;
+        max-width: 480px;
+        padding: 0 16px;
+    }
+    .top-header{
+        flex-direction: column;
+        padding: 0;
+    }
+    .top-content{
+        flex-direction: column;
+        gap: 24px;
+        border-bottom: 2px solid var(--whitegrey);
+    }
+    .header-wrap h1, .header-wrap p{
+       text-align: left;
+    }
+    .nav-content{
+        flex-direction: column;
+    }
+    .nav-content-menu{
+        visibility: collapse;
+        display: none;
+    }
+    .nav-content-dropdown{
+        visibility:visible;
+        display: flex;
+        width: 100%;
+        padding: 10px 0;
+    }
+    .nav-dropdown{
+        width: 100%;
+        padding: 15px;
+        border-radius: 8px;
+        color: var(--grey);
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .nav-dropdown option{
+        color: var(--grey);
+    }
+    .form-section{
+        padding: 0;
+    }
+    .form-top-header{
+        padding: 0;
+    }
+    .form-top-content {
+        padding: 0;
+        flex-direction: column;
+    }
+    .form-top-content .header-wrap{
+        padding: 0;
+        flex-direction: column;
+    }
+    .personal-form{
+        gap: 20px;
+    }
+    .personal-form .input-group{
+        flex-direction: column;
+        gap: 5px;
+    }
+    .personal-form .input-group .input-field{
+        width: 100%;
+    }
+    .input-row{
+        flex-direction: column;
+        width: 100%;
+        gap: 6px;
+    }
+    .big-input .input-column{
+        width: 100%;
+    }
+    .big-input .input-column .inline-element{
+        width: 100%;
+        flex-direction: column;
+    }
+    #uploadedImage{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+    .inline-element #style{
+        width: 100%;
+        flex-direction: column;
+    }
+    .inline-element .side-list{
+        width: 100%;
+    }
+    .photo .input-row{
+        flex-direction: column;
+        width: 100%;
+    }
+} 

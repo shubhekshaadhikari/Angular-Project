@@ -53,9 +53,9 @@
                         <section class="input-group">
                             <label for="fname" id="firstName">Name</label>
                             <section class="input-row">
-                                <input class="input-field" type="text" placeholder="First name" formControlName="fname">
+                                <input class="input-field" type="text" id="fname" placeholder="First name" formControlName="fname">
                                 <label for="lname" id="lastName" style="display: none;">Last Name</label>
-                                <input class="input-field" type="text" placeholder="Last name" formControlName="lname">
+                                <input class="input-field" id="lname" type="text" placeholder="Last name" formControlName="lname">
                             </section>
                             <span class=" labelAlert"></span>
                         </section>
@@ -209,40 +209,19 @@
 
                             </section>
                         </section>
-                        
                         <section class="page-header form-footer-header">
                             <section class="header-content form-footer-content">
                                 <section class="header-action">
                                     <button type="reset" class="nav-side-btn btn">Reset</button>
                                     <!-- <button type="button" class="nav-side-btn btn" id="updatebtn" onclick="updateData()">Update</button> -->
-                                    <button type="submit" class="nav-side-btn btn" id="purple" onsubmit="addData()">Save</button>
+                                    <button type="submit" [disabled]="!form.valid" class="nav-side-btn btn" id="purple" onsubmit="addData()">Save</button>
                                 </section>
                             </section>
                         </section>
                     </form>
 
-                </section>
-
-
-                <!-- <table id="crudTable">
-                    <thead>
-                        <tr>
-                            <th>Fname</th>
-                            <th>Lname</th>
-                            <th>Email</th>
-                            <th>Role</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tableBody">
-                    </tbody>
-                </table> -->
-
-                
+                </section>                
             </section>
         </section>
-    </section>
-
-    
-    
+    </section>    
 </main>

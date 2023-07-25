@@ -9,7 +9,7 @@ import { AbstractControl, FormGroup, FormBuilder, FormControl, Validators } from
 })
 
 export  class SignupComponent{
-  // control!:FormControl;
+  //control!:FormControl;
   signupForm: FormGroup;
 
   constructor(private router: Router, private formBuilder: FormBuilder) {

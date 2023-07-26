@@ -68,12 +68,12 @@
                         <section class="input-group photo">
                             <label for="img">Your photo<br><span class="label-next-line">This will be displayed on your profile</span></label>
                             <section class="input-row">
-                                <figure><img id="uploadedImage"></figure>
+                                <figure><img id="uploadedImage" [src]="form.get('img')?.value || 'assets/Avatar.svg'"></figure>
+                                
                                 <section class="upload-container">
                                     <section class="upload-content">
                                         <label for="img">
-                                            <input type='file' id="img" style="visibility: collapse;" formControlName="img">
-                                            <img id="uploadedImage" src="#" accept="image/png, image/jpeg" style="display:none;">
+                                            <input type='file' id="img" (change)="imageUpload($event)" style="visibility: collapse;" accept="image/png, image/jpeg" formControlName="img">
                                             <section class="wrap">
                                                 <figure class="logo"><img src="/assets/portcardlogo2.svg"></figure>
                                                 <h1><a>Click to upload</a> or drag and drop</h1>
@@ -82,6 +82,7 @@
                                         </label>
                                     </section>
                                 </section>
+
                             </section>
                         </section>
 

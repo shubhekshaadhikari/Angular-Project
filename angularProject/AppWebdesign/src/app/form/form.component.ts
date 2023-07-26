@@ -1,4 +1,4 @@
-import { Component, OnChanges, Input } from '@angular/core';
+import { Component, OnChanges, Input, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Dataset, DataService } from '../service/crude/data.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -28,8 +28,21 @@ export class FormComponent implements OnChanges {
       country: [''],
       time: [''],
       bio: [''],
-      file: ['']
     });
+  }
+
+  imageUpload(event: Event): void {
+    const inputElement = event.target as HTMLInputElement;
+    if (inputElement.files && inputElement.files[0]) {
+      const fileReader = new FileReader();
+      fileReader.onload = (e) => {
+        const imagePreview = document.getElementById('uploadedImage') as HTMLImageElement;
+        if (e.target && e.target.result) {
+          imagePreview.src = e.target.result as string;
+        }
+      };
+      fileReader.readAsDataURL(inputElement.files[0]);
+    }
   }
 
   ngOnChanges(): void {

@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
 
+    //toggle navbar on click
     isNavOpen = false;
-
     toggleNav() {
       this.isNavOpen = !this.isNavOpen;
     }

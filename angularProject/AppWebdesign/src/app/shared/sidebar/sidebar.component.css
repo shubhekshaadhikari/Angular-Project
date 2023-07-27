@@ -1,4 +1,3 @@
-
 .side-bar{
     width: 100%;
     max-width: 280px;
@@ -263,9 +262,6 @@ figure.btn-icon a{
         visibility: visible;
         display: flex;
     }
-    .header-logo figure #close-icon i{
-        visibility: hidden;
-    }
     .side-icon figure{
         width: 30px;
         height: 30px;
@@ -308,6 +304,9 @@ figure.btn-icon a{
         background-color: var(--darkpurple);
         overflow-y: auto;
         transition: width 0.2s ease-in-out;
+    }
+    #toggleSidebar.active .sidebar-nav{
+        margin-top: 110px;
     }
     #toggleSidebar.active .sidebar-nav .nav-header,
     #toggleSidebar.active .sidebar-nav .nav-search,

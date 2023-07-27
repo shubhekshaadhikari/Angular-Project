@@ -9,11 +9,11 @@ import { Router } from '@angular/router';
 export class SidebarComponent {
   constructor(private router: Router) {}
 
+  //toggle navbar
   isNavOpen = false;
-
-    toggleNav() {
-      this.isNavOpen = !this.isNavOpen;
-    }
+  toggleNav() {
+    this.isNavOpen = !this.isNavOpen;
+  }
   
   //open form page on click 
   Form(event: Event) {
@@ -26,6 +26,7 @@ export class SidebarComponent {
     this.router.navigate(['/admin']); 
   }
 
+  //open login page on click
   Login(event: Event) {
     event.preventDefault();
     this.router.navigate(['/login']); 

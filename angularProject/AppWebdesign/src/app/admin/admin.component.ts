@@ -22,6 +22,7 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void {
     this.dataservice.getAll().subscribe((formdata) => {
       this.formdata = formdata;
+      // console.log("admin", this.formdata);
       this.search.search('');
     });
   }
@@ -37,7 +38,6 @@ export class AdminComponent implements OnInit {
         this.formdata = this.formdata.filter(formdata => formdata.id !==id);
       });
       alert("Data deleted sucessfully");
-      
     }
   }
 
@@ -59,19 +59,20 @@ export class AdminComponent implements OnInit {
   onSearch(event: Event): void {
     const searchTerm = (event.target as HTMLInputElement).value;
     this.search.search(searchTerm);
-    this.pagination.setCurrentPage(1);
+    this.currentPage = 1;
   }
 
   totalPages(): number {
     return Math.ceil(this.search.getFilteredData().length / this.pagination.getItemsPerPage());
   }
 
-  getPageItems(): any[]{
-    const firstIndex = (this.pagination.getCurrentPage() - 1) * this.pagination.getItemsPerPage();
+  getPageItems(): Dataset[] {
+    const filteredData = this.search.getFilteredData(); 
+    const firstIndex = (this.currentPage - 1) * this.pagination.getItemsPerPage();
     const lastIndex = firstIndex + this.pagination.getItemsPerPage();
-    return this.search.getFilteredData().slice(firstIndex, lastIndex);
+    return filteredData.slice(firstIndex, lastIndex);
   }
- 
+
   previousPage(): void{
    this.pagination.previousPage();
   }

@@ -4,14 +4,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PaginationService {
-  private itemsPerPage: number = 5;
+  private itemsPerPage: number = 6;
   private currentPage: number = 1;
 
   constructor() { }
-
-  // setItemsPerPage(itemsPerPage: number): void {
-  //   this.itemsPerPage = itemsPerPage;
-  // }
 
   getItemsPerPage(): number {
     return this.itemsPerPage;
@@ -29,13 +25,13 @@ export class PaginationService {
     if (this.currentPage > 1) {
       this.currentPage--;
     }
+    // console.log('Previous Page:', this.currentPage);
   }
 
   nextPage(totalPages: number): void {
     if (this.currentPage < totalPages) {
       this.currentPage++;
     }
+    // console.log('Next Page:', this.currentPage);
   }
-
-  
 }

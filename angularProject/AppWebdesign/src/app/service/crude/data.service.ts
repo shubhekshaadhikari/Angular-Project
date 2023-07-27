@@ -8,6 +8,7 @@ export interface Dataset {
   fname: string;
   lname: string;
   email: string;
+  img: string;
   role: string;
   country: string;
   time: string;

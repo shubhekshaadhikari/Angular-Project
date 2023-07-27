@@ -1,5 +1,4 @@
 <app-navbar></app-navbar>
-
 <main class="main-box">
     <section class="login-container">
         <section class="login-header">
@@ -15,12 +14,12 @@
             <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
                 <section class="input-group">
                     <label class="label" for="email">Email*</label>
-                    <input class="input-field" type="email" placeholder="Enter your email" formControlName="email" id="email">
+                    <input class="input-field" type="email" placeholder="Enter your email" formControlName="email" id="email" name="email">
                     <app-validation [control]="loginForm.get('email')" fieldName="Email"></app-validation>
                 </section>
                 <section class="input-group">
                     <label class="label" for="password">Password*</label>
-                    <input class="input-field" type="password" placeholder="........" formControlName="password" id="password">
+                    <input class="input-field" type="password" placeholder="........" formControlName="password" id="password" name="password">
                     <app-validation [control]="loginForm.get('password')" fieldName="Password"></app-validation>
                 </section>
                 <section class="row">

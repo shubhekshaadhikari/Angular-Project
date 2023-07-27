@@ -39,6 +39,7 @@ export class FormComponent implements OnChanges {
         const imagePreview = document.getElementById('uploadedImage') as HTMLImageElement;
         if (e.target && e.target.result) {
           imagePreview.src = e.target.result as string;
+          this.form.get('img')?.setValue(e.target.result);
         }
       };
       fileReader.readAsDataURL(inputElement.files[0]);

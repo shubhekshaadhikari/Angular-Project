@@ -68,7 +68,7 @@
                         <section class="input-group photo">
                             <label for="img">Your photo<br><span class="label-next-line">This will be displayed on your profile</span></label>
                             <section class="input-row">
-                                <figure><img id="uploadedImage" [src]="form.get('img')?.value || 'assets/Avatar.svg'"></figure>
+                                <figure><img id="uploadedImage" [src]="form.get('img')?.value || '/.src/assets/Avatar.svg'"></figure>
                                 
                                 <section class="upload-container">
                                     <section class="upload-content">
@@ -82,7 +82,6 @@
                                         </label>
                                     </section>
                                 </section>
-
                             </section>
                         </section>
 

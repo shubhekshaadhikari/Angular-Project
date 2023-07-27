@@ -9,7 +9,6 @@ import { AbstractControl, FormGroup, FormBuilder, FormControl, Validators } from
 })
 
 export  class SignupComponent{
-  //control!:FormControl;
   signupForm: FormGroup;
 
   constructor(private router: Router, private formBuilder: FormBuilder) {
@@ -64,7 +63,7 @@ export  class SignupComponent{
 
       localStorage.setItem('loginData',formDataJson);
       alert("Registration sucessful!!");
-      //this.router.navigate(['/login']); 
+      this.router.navigate(['/login']); 
             
     } 
     else{

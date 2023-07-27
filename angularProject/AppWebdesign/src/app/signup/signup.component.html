@@ -1,5 +1,4 @@
 <app-navbar></app-navbar>
-
 <main class="main-box">
     <section class="login-container">
         <section class="signup-header">
@@ -33,11 +32,9 @@
                     <label class="label" for="cpassword">Confirm Password *</label>
                     <input class="input-field" type="password" placeholder="........" formControlName="cpassword" id="cpassword">
                     <app-validation [control]="signupForm.get('cpassword')" fieldName="Confirm Password"></app-validation>
-                    <!-- {{signupForm.errors?.['passwordMatch']}} -->
                     <div class="error-msg" *ngIf="signupForm.get('cpassword')?.touched && signupForm.errors?.['passwordMatch'] === false">   
                         Confirm password does not match Password
                     </div>
-                   
                 </section>
                 <section class="input-group">
                     <label class="label" for="dob">Date of Birth*</label>

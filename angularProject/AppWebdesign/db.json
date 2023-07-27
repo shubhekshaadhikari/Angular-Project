@@ -4,60 +4,55 @@
       "fname": "ram",
       "lname": "sharma",
       "email": "ram@123.com",
-      "img": "",
+      "img": "C:\\fakepath\\Avatar.svg",
       "role": "seo",
       "country": "UK",
       "time": "Atlantic Standard Time UTC-04",
       "bio": "sdfsdfasdasdasd",
-      "file": "",
       "id": 4
     },
     {
       "fname": "test",
       "lname": "case",
       "email": "abc@mail.com",
-      "img": "",
+      "img": "C:\\fakepath\\Avatar1.svg",
       "role": "intern",
       "country": "Russia",
       "time": "Mountain Standard Time UTC-07",
       "bio": "asdfadfascasdf",
-      "file": "",
       "id": 6
     },
     {
       "fname": "case",
       "lname": "test",
       "email": "case@test.com",
-      "img": "",
+      "img": "C:\\fakepath\\Avatar3.svg",
       "role": "trainee",
       "country": "China",
       "time": "Central Standard Time UTC-06",
       "bio": "asdasdasdasd",
-      "file": "",
       "id": 7
     },
     {
       "fname": "subee",
       "lname": "timilsina",
       "email": "xyz@789.com",
-      "img": "",
+      "img": null,
       "role": "designer",
       "country": "Nepal",
       "time": "Nepal Time UTC+05:45",
       "bio": "hi there how r u doing",
-      "file": "",
       "id": 9
     },
     {
       "fname": "hi",
       "lname": "there",
       "email": "abc@ds.df",
-      "img": "",
+      "img": null,
       "role": "sdf",
       "country": "Russia",
       "time": "Central Standard Time UTC-06",
       "bio": "sdasdasdas",
-      "file": "",
       "id": 10
     },
     {
@@ -69,7 +64,6 @@
       "country": "UK",
       "time": "Eastern Standard Time UTC-05",
       "bio": "jkdfjkasdf",
-      "file": null,
       "id": 11
     },
     {
@@ -81,7 +75,6 @@
       "country": "UK",
       "time": "Eastern Standard Time UTC-05",
       "bio": "hi there hello",
-      "file": null,
       "id": 12
     },
     {
@@ -93,7 +86,6 @@
       "country": null,
       "time": null,
       "bio": null,
-      "file": null,
       "id": 13
     },
     {
@@ -105,7 +97,6 @@
       "country": null,
       "time": null,
       "bio": null,
-      "file": null,
       "id": 14
     },
     {
@@ -117,7 +108,6 @@
       "country": null,
       "time": null,
       "bio": null,
-      "file": null,
       "id": 15
     },
     {
@@ -129,7 +119,6 @@
       "country": null,
       "time": null,
       "bio": null,
-      "file": null,
       "id": 16
     },
     {
@@ -141,8 +130,40 @@
       "country": null,
       "time": null,
       "bio": null,
-      "file": null,
       "id": 17
+    },
+    {
+      "fname": "subu",
+      "lname": null,
+      "email": null,
+      "img": "C:\\fakepath\\Avatar+2.svg",
+      "role": null,
+      "country": null,
+      "time": null,
+      "bio": null,
+      "id": 18
+    },
+    {
+      "fname": null,
+      "lname": null,
+      "email": null,
+      "img": "C:\\fakepath\\Avatar5.svg",
+      "role": null,
+      "country": null,
+      "time": null,
+      "bio": null,
+      "id": 19
+    },
+    {
+      "fname": null,
+      "lname": null,
+      "email": null,
+      "img": "C:\\fakepath\\Avatar+2.svg",
+      "role": null,
+      "country": null,
+      "time": null,
+      "bio": null,
+      "id": 20
     }
   ]
 }
